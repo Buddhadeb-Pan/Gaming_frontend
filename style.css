@@ -1,0 +1,281 @@
+/* Reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    height: 100%;
+    width: 100%;
+    font-family: Arial, sans-serif;
+}
+
+
+/* Background */
+
+.bacground {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.bacground img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    filter: blur(8px);
+    transform: scale(1.1);
+}
+
+
+/* Overlay Image */
+
+.overlay-img {
+    position: relative;
+    width: 80%;
+    max-width: 900px;
+    margin: 0 auto;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    z-index: 1;
+}
+
+.overlay-img img {
+    width: 100%;
+    height: auto;
+    max-height: 80vh;
+    border-radius: 12px;
+    object-fit: cover;
+    transition: 0.4s ease;
+    cursor: pointer;
+}
+
+.overlay-img img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.6);
+    opacity: 0.95;
+}
+
+
+/* Navbar */
+
+#first {
+    position: absolute;
+    top: 20px;
+    left: 40px;
+    right: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+    color: #fff;
+}
+
+#first .left h1 {
+    font-size: 28px;
+    font-family: 'Impact', 'Arial Black', sans-serif;
+    color: white;
+    letter-spacing: 2px;
+}
+
+#first .small {
+    font-size: 16px;
+    margin: 0 4px;
+}
+
+#first .right ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    font-size: 14px;
+    font-weight: 500;
+    color: #fff;
+}
+
+#first .right ul li {
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+#first .right ul li:hover {
+    color: #ffcc00;
+}
+
+
+/* Big Title */
+
+#second {
+    position: absolute;
+    top: 120px;
+    left: 40px;
+    z-index: 10;
+    color: white;
+}
+
+#second h1 {
+    font-size: 50px;
+    font-family: 'Impact', 'Arial Black', sans-serif;
+    letter-spacing: 2px;
+}
+
+#second .little {
+    font-size: 18px;
+    margin: 0 2px;
+}
+
+
+/* Modern Warfare */
+
+#left2 h3 {
+    margin-top: 6px;
+    font-size: 22px;
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.7);
+}
+
+
+/* Trailer */
+
+.trailer {
+    position: absolute;
+    bottom: 30px;
+    right: 20px;
+    width: 320px;
+    text-align: center;
+    color: #fff;
+    z-index: 5;
+}
+
+.trailer h2 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.7);
+}
+
+.video-box {
+    position: relative;
+    width: 100%;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.6);
+}
+
+.video-box video {
+    width: 100%;
+    display: block;
+}
+
+
+/* Social Links */
+
+.social-links {
+    position: absolute;
+    bottom: 30px;
+    left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    z-index: 3;
+}
+
+.social-links a {
+    display: block;
+    width: 32px;
+    height: 32px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    padding: 6px;
+    border-radius: 4px;
+    backdrop-filter: blur(4px);
+    transition: 0.3s ease;
+}
+
+.social-links a:hover {
+    background: #ffcc00;
+    border-color: #ffcc00;
+}
+
+.social-links img {
+    width: 100%;
+    height: auto;
+    display: block;
+    filter: invert(1);
+}
+
+
+/* ✅ Mobile Responsive */
+
+@media (max-width: 768px) {
+    .overlay-img {
+        width: 95%;
+        max-width: 100%;
+    }
+    #first .left h1 {
+        font-size: 20px;
+    }
+    #first .small {
+        font-size: 10px;
+    }
+    #first .right ul {
+        gap: 10px;
+        font-size: 12px;
+    }
+    #second h1 {
+        font-size: 40px;
+    }
+    #second .little {
+        font-size: 14px;
+        top: -8px;
+    }
+    #left2 h3 {
+        font-size: 16px;
+        margin-top: 4px;
+    }
+    .trailer {
+        position: static;
+        margin: 20px auto;
+        width: 90%;
+        text-align: center;
+    }
+    .video-box {
+        width: 100%;
+    }
+    .social-links {
+        position: static;
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+        gap: 15px;
+    }
+    .social-links img {
+        width: 28px;
+    }
+}
+
+@media (max-width: 480px) {
+    #second h1 {
+        font-size: 32px;
+    }
+    #second .little {
+        font-size: 12px;
+        top: -6px;
+    }
+    #left2 h3 {
+        font-size: 14px;
+    }
+}

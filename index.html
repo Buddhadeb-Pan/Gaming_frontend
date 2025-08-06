@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Call of duty--Frontend Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <audio id="bgm" loop hidden>
+        <source src="music.mp3" type="audio/mpeg">
+    </audio>
+    <div class="bacground">
+        <img src="cod5.webp">
+    </div>
+    <div class="overlay-img">
+        <img src="cod4.jpg">
+
+        <section id="first">
+            <div class="left">
+                <h1>CALL <span class="small">OF</span> DUTY</h1>
+            </div>
+            <div class="right">
+
+                <ul>
+                    <li>Home</li>
+                    <li>Game</li>
+                    <li>Platform</li>
+                    <li>About</li>
+                </ul>
+
+
+            </div>
+        </section>
+        <section id="second">
+            <div class="left1">
+                <h1>CALL <span class="little">OF</span>DUTY</h1>
+                <div id="left2">
+                    <h3>
+                        <span id="element"></span>
+                    </h3>
+
+
+                </div>
+            </div>
+
+        </section>
+        <div class="trailer">
+            <h2>RELEASE TRAILER</h2>
+            <div class="video-box">
+                <video controls poster="thumb.jpg" autoplay loop muted playsinline>
+                    <source src="cod_trailer.mp4" type="video/mp4">
+                </video>
+                <div class="play-icon">&#9658;</div>
+            </div>
+
+
+        </div>
+
+        <div class="social-links">
+            <a href="#"><img src="facebook.png" alt="Facebook"></a>
+            <a href="#"><img src="twitter.png" alt="Twitter"></a>
+            <a href="#"><img src="instagram.png" alt="Instagram"></a>
+        </div>
+
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['MODERN <br> WARFARE'],
+            typeSpeed: 60,
+        });
+    </script>
+
+    <script>
+        document.addEventListener('click', () => {
+            document.getElementById('bgm').play();
+        }, {
+            once: true
+        });
+    </script>
+
+</body>
+
+</html>
